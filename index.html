@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz de Pokémon</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-image: url(https://34452.cdn.simplo7.net/static/34452/sku/168061190334701.jpg);
+            background-size: cover;
+            background-repeat: no-repeat;
+            color: #fff;
+            text-align: center;
+            padding: 20px;
+            margin: 0;
+        }
+        .quiz-container {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+            margin: auto;
+            max-width: 600px;
+            backdrop-filter: blur(2px);
+        }
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: #ff5733;
+        }
+        h2 {
+            color: #000000;
+            font-size: 1.5em;
+            margin: 15px 0;
+            border: solid black 5px;
+            background-color: white;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+        button {
+            margin-top: 30px;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            border: none;
+            border-radius: 8px;
+            background-color: #ffcc00;
+            color: #000;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.2s;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+        button:hover {
+            background-color: #ffd700;
+            transform: translateY(-2px);
+        }
+    </style>
+</head>
+<body>
+
+<div class="quiz-container">
+    <h1>Quiz de Pokémon</h1>
+
+    <label for="nome">Digite seu nome:</label>
+    <input type="text" id="nome">
+    <button onclick="gravarNome()">Iniciar o Teste</button>
+
+    <form id="quizForm" style="display:none;">
+        <h2>1. Qual é o Pokémon inicial de Água da região de Kanto?</h2>
+        <div class="options">
+            <input type="radio" class="radios" name="p1" value="Squirtle" id="p1_a1">
+            <label for="p1_a1">Squirtle</label>
+            <input type="radio" class="radios" name="p1" value="Charmander" id="p1_a2">
+            <label for="p1_a2">Charmander</label>
+            <input type="radio" class="radios" name="p1" value="Bulbasaur" id="p1_a3">
+            <label for="p1_a3">Bulbasaur</label>
+            <input type="radio" class="radios" name="p1" value="Psyduck" id="p1_a4">
+            <label for="p1_a4">Psyduck</label>
+        </div>
+
+        <h2>2. Qual Pokémon é conhecido como o 'Pokémon Rato'?</h2>
+        <div class="options">
+            <input type="radio" class="radios" name="p2" value="Pikachu" id="p2_a1">
+            <label for="p2_a1">Pikachu</label>
+            <input type="radio" class="radios" name="p2" value="Rattata" id="p2_a2">
+            <label for="p2_a2">Rattata</label>
+            <input type="radio" class="radios" name="p2" value="Jigglypuff" id="p2_a3">
+            <label for="p2_a3">Jigglypuff</label>
+            <input type="radio" class="radios" name="p2" value="Sandshrew" id="p2_a4">
+            <label for="p2_a4">Sandsh ```html
+rew</label>
+        </div>
+
+        <h2>3. Qual é o Pokémon que evolui para Charizard?</h2>
+        <div class="options">
+            <input type="radio" class="radios" name="p3" value="Charmander" id="p3_a1">
+            <label for="p3_a1">Charmander</label>
+            <input type="radio" class="radios" name="p3" value="Bulbasaur" id="p3_a2">
+            <label for="p3_a2">Bulbasaur</label>
+            <input type="radio" class="radios" name="p3" value="Squirtle" id="p3_a3">
+            <label for="p3_a3">Squirtle</label>
+            <input type="radio" class="radios" name="p3" value="Pidgey" id="p3_a4">
+            <label for="p3_a4">Pidgey</label>
+        </div>
+
+        <h2>4. Qual é o Pokémon que é um tipo Fada e é conhecido por sua habilidade de cantar?</h2>
+        <div class="options">
+            <input type="radio" class="radios" name="p4" value="Jigglypuff" id="p4_a1">
+            <label for="p4_a1">Jigglypuff</label>
+            <input type="radio" class="radios" name="p4" value="Clefairy" id="p4_a2">
+            <label for="p4_a2">Clefairy</label>
+            <input type="radio" class="radios" name="p4" value="Togepi" id="p4_a3">
+            <label for="p4_a3">Togepi</label>
+            <input type="radio" class="radios" name="p4" value="Snorlax" id="p4_a4">
+            <label for="p4_a4">Snorlax</label>
+        </div>
+
+        <h2>5. Qual é o Pokémon que é conhecido como o 'Pokémon Lendário do Tempo'?</h2>
+        <div class="options">
+            <input type="radio" class="radios" name="p5" value="Dialga" id="p5_a1">
+            <label for="p5_a1">Dialga</label>
+            <input type="radio" class="radios" name="p5" value="Palkia" id="p5_a2">
+            <label for="p5_a2">Palkia</label>
+            <input type="radio" class="radios" name="p5" value="Giratina" id="p5_a3">
+            <label for="p5_a3">Giratina</label>
+            <input type="radio" class="radios" name="p5" value="Mewtwo" id="p5_a4">
+            <label for="p5_a4">Mewtwo</label>
+        </div>
+
+        <button type="button" onclick="calcularResultado()">Enviar Respostas</button>
+    </form>
+
+    <div id="resultado" style="display:none;"></div>
+    <button id="reiniciar" style="display:none;" onclick="reiniciarQuiz()">Reiniciar Quiz</button>
+</div>
+
+<script>
+    let nomeUsuario = '';
+
+    function gravarNome() {
+        nomeUsuario = document.getElementById('nome').value;
+        document.getElementById('quizForm').style.display = 'block';
+        document.getElementById('nome').style.display = 'none';
+        document.querySelector('button[onclick="gravarNome()"]').style.display = 'none';
+    }
+
+    function calcularResultado() {
+        let acertos = 0;
+        const respostasCorretas = ['Squirtle', 'Pikachu', 'Charmander', 'Jigglypuff', 'Dialga'];
+
+        for (let i = 1; i <= 5; i++) {
+            const radios = document.getElementsByName('p' + i);
+            for (const radio of radios) {
+                if (radio.checked && radio.value === respostasCorretas[i - 1]) {
+                    acertos++;
+                }
+            }
+        }
+
+        const resultadoDiv = document.getElementById('resultado');
+        resultadoDiv.style.display = 'block';
+        resultadoDiv.innerHTML = `<h2>${nomeUsuario}, você acertou ${acertos} de 5 perguntas!</h2>`;
+        document.getElementById('reiniciar').style ```html
+</script>
+</body>
+</html>
